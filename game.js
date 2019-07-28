@@ -16,5 +16,17 @@ var display = document.getElementById("#colorDisplay");
 display.textContent = pickedColor.toUpperCase();
 
 for(var i=0; i<squares.length; i++){
+	//add intial colors
 	squares[i].style.background = colors[i];
+
+	//add quick listeners
+	squares[i].addEventListener("click", function(){
+		clickedColor = this.style.background;
+		if(clickedColor===pickedColor){
+			alert("You won");
+		}
+		else{
+			this.style.background ="black";
+		}
+	})
 }
