@@ -3,7 +3,7 @@
 var colors= generateRandomColor(6);
 
 var squares = document.querySelectorAll(".square");
-var pickedColor = colors[3];
+var pickedColor = colors[randomPickedColor()];
 
 var display = document.getElementById("#colorDisplay");
 var header = document.querySelector("#header");
@@ -27,6 +27,10 @@ for(var i=0; i<squares.length; i++){
 			messageDisplay.textContent = "Try Again !!";
 		}
 	})
+}
+
+function randomPickedColor(){
+	return Math.floor(Math.random()*6);
 }
 
 function changeColor(color){
