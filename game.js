@@ -14,7 +14,7 @@ display.textContent = pickedColor.toUpperCase();
 var easyButton = document.querySelector("#easyButton");
 easyButton.addEventListener("click", function(){
 	colors= generateRandomColor(3);
-	message.innerHTML = "Click Square Box Below";
+	message.innerHTML = "Click Square Box";
 	header.style.background = "steelblue";
 	numberSquares =3;
 	reset.innerHTML = "New Color";
@@ -37,7 +37,7 @@ easyButton.addEventListener("click", function(){
 var hardButton = document.querySelector("#hardButton");
 hardButton.addEventListener("click", function(){
 	colors= generateRandomColor(6);
-	message.innerHTML = "Click Square Box Below";
+	message.innerHTML = "Click Square Box";
 	numberSquares =6;
 	header.style.background = "steelblue";
 	reset.innerHTML = "New Color";
@@ -60,7 +60,7 @@ reset.addEventListener("click", function(){
 		header.style.background = "steelblue";
 	} 
 	}
-	message.innerHTML = "Click Square Box Below";
+	message.innerHTML = "Click Square Box";
 	
 
 });
@@ -73,7 +73,7 @@ for(var i=0; i<squares.length; i++){
 	squares[i].addEventListener("click", function(){
 		clickedColor = this.style.background;
 		if(clickedColor===pickedColor){
-			message.innerHTML = "Correct!! You Won";
+			message.innerHTML = "Correct!! ";
 			reset.innerHTML = "Play Again"
 			changeColor(pickedColor);
 		}
