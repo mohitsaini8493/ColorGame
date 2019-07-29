@@ -1,5 +1,3 @@
-
-
 var colors= generateRandomColor(6);
 var numberSquares =6;
 var squares = document.querySelectorAll(".square");
@@ -7,7 +5,6 @@ var pickedColor = colors[randomPickedColor(6)];
 var display = document.getElementById("#colorDisplay");
 var header = document.querySelector("#header");
 var message = document.querySelector("#message");
-
 
 display.textContent = pickedColor.toUpperCase();
 
@@ -64,7 +61,6 @@ reset.addEventListener("click", function(){
 	
 
 });
-
 
 for(var i=0; i<squares.length; i++){
 	//add intial colors
