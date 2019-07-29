@@ -14,7 +14,7 @@ display.textContent = pickedColor.toUpperCase();
 var easyButton = document.querySelector("#easyButton");
 easyButton.addEventListener("click", function(){
 	colors= generateRandomColor(3);
-	message.innerHTML = "Click Square Box";
+	message.innerHTML = "";
 	header.style.background = "steelblue";
 	numberSquares =3;
 	reset.innerHTML = "New Color";
@@ -37,7 +37,7 @@ easyButton.addEventListener("click", function(){
 var hardButton = document.querySelector("#hardButton");
 hardButton.addEventListener("click", function(){
 	colors= generateRandomColor(6);
-	message.innerHTML = "Click Square Box";
+	message.innerHTML = "";
 	numberSquares =6;
 	header.style.background = "steelblue";
 	reset.innerHTML = "New Color";
@@ -60,7 +60,7 @@ reset.addEventListener("click", function(){
 		header.style.background = "steelblue";
 	} 
 	}
-	message.innerHTML = "Click Square Box";
+	message.innerHTML = "";
 	
 
 });
