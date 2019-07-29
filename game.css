@@ -15,24 +15,24 @@ body{
 	margin: 0 auto;
 }
 
-h1{
-	font-family: arial;
-	color: white;
- 	text-align: center;
-}
 
 #colorDisplay{
 	color: white;
 	text-align: center;
+	background: steelblue;
 }
 
-span{
-	 text-align: center;
-	 font-size: 16px;
-}
 
 #stripe{
 	text-align: center;
 	background: white;
 
+}
+
+#header{
+ font-family: arial;
+	color: white;
+ 	text-align: center;
+ 	background: steelblue;
+}
 }

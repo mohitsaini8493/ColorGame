@@ -14,6 +14,8 @@ display.textContent = pickedColor.toUpperCase();
 var easyButton = document.querySelector("#easyButton");
 easyButton.addEventListener("click", function(){
 	colors= generateRandomColor(3);
+	message.innerHTML = "Click Square Box Below";
+	header.style.background = "steelblue";
 	numberSquares =3;
 	reset.innerHTML = "New Color";
 	pickedColor = colors[randomPickedColor(3)];
@@ -35,7 +37,9 @@ easyButton.addEventListener("click", function(){
 var hardButton = document.querySelector("#hardButton");
 hardButton.addEventListener("click", function(){
 	colors= generateRandomColor(6);
+	message.innerHTML = "Click Square Box Below";
 	numberSquares =6;
+	header.style.background = "steelblue";
 	reset.innerHTML = "New Color";
 	pickedColor = colors[randomPickedColor(6)];
 	display.textContent = pickedColor.toUpperCase();
@@ -47,16 +51,16 @@ hardButton.addEventListener("click", function(){
 var reset = document.querySelector("#reset");
 reset.addEventListener("click", function(){
 	colors= generateRandomColor(6);
-	pickedColor = colors[randomPickedColor(6)];
+	pickedColor = colors[randomPickedColor(numberSquares)];
 	display.textContent = pickedColor.toUpperCase();
 	for(var i=0; i<numberSquares; i++){
 	squares[i].style.background = colors[i];
 	if(reset.innerHTML==="Play Again"){
 		reset.innerHTML = "New Color";
-		header.style.background = "black";
+		header.style.background = "steelblue";
 	} 
 	}
-	message.innerHTML = "Click Square Box";
+	message.innerHTML = "Click Square Box Below";
 	
 
 });
