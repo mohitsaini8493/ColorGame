@@ -4,10 +4,25 @@ var colors= generateRandomColor(6);
 
 var squares = document.querySelectorAll(".square");
 var pickedColor = colors[randomPickedColor()];
-
 var display = document.getElementById("#colorDisplay");
 var header = document.querySelector("#header");
 var messageDisplay = document.querySelector("#message");
+
+
+var reset = document.querySelector("#reset");
+reset.addEventListener("click", function(){
+	colors= generateRandomColor(6);
+	pickedColor = colors[randomPickedColor()];
+	display.textContent = pickedColor.toUpperCase();
+	for(var i=0; i<squares.length; i++){
+	squares[i].style.background = colors[i];
+	if(reset.innerHTML==="Play Again"){
+		reset.innerHTML = "New Color";
+		header.style.background = "black";
+	}
+
+}
+});
 
 display.textContent = pickedColor.toUpperCase();
 
@@ -20,6 +35,7 @@ for(var i=0; i<squares.length; i++){
 		clickedColor = this.style.background;
 		if(clickedColor===pickedColor){
 			messageDisplay.innerHTML = "Correct!! You Won";
+			reset.innerHTML = "Play Again"
 			changeColor(pickedColor);
 		}
 		else{

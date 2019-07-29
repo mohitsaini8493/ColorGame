@@ -27,10 +27,11 @@ h1{
 }
 
 span{
-	 color : white;
 	 text-align: center;
+	 font-size: 16px;
 }
-#messageDiv{
+#stripe{
 	text-align: center;
+	background: white;
 
 }
