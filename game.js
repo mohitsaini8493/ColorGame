@@ -10,7 +10,12 @@ display.textContent = pickedColor.toUpperCase();
 
 var easyButton = document.querySelector("#easyButton");
 easyButton.addEventListener("click", function(){
+
 	colors= generateRandomColor(3);
+	easyButton.style.background = "steelblue";
+	easyButton.style.color = "white";
+	hardButton.style.background = "white";
+	hardButton.style.color = "steelblue";
 	message.innerHTML = "";
 	header.style.background = "steelblue";
 	numberSquares =3;
@@ -33,6 +38,10 @@ easyButton.addEventListener("click", function(){
 
 var hardButton = document.querySelector("#hardButton");
 hardButton.addEventListener("click", function(){
+	easyButton.style.background = "white";
+	easyButton.style.color = "steelblue";
+	hardButton.style.background = "steelblue";
+	hardButton.style.color = "white";
 	colors= generateRandomColor(6);
 	message.innerHTML = "";
 	numberSquares =6;
