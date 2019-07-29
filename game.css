@@ -58,3 +58,8 @@ button{
 	display: inline-block;
 	width: 20%;
 }
+
+button:hover{
+	color: white;
+	background: steelblue;
+}
